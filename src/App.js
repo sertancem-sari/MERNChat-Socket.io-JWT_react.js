@@ -5,6 +5,8 @@ import Login from './features/auth/Login';
 import MainLayout from './components/main/MainLayout';
 import Main from './components/main/Main';
 import UserList from './features/users/UserList';
+import NewUser from './features/users/NewUser';
+import EditUser from './features/users/EditUser';
 import './App.css';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
             <Route index element={<Main />}/>
             <Route path='users'>
               <Route index element={<UserList />}/>
+              <Route path='new' element={<NewUser />} />
+              <Route path=':id' element={<EditUser />} />
             </Route>
           </Route>
         </Route>
