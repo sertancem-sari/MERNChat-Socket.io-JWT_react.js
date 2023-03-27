@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-image: url('./images/realtime.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome-comtainer{
+  border: 1rem solid red;
+}
+
+.public{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.text{
+  font-size: 5rem;
+}
+
+/* MAIN HEADER PART*/
+
+li{
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: black;
+}
+
+.main__header-ul{
+  list-style: none;
+}
+
+.main__header-ul li{
+  display: inline-block;
+  padding: 0px 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.main__header-ul li:hover{
+  color: white;
+  border: 10px solid turquoise;
+  background-color: turquoise;
+}
+
+.main__header-sign{
+  list-style: none;
+  border: 10px turquoise solid;
+  background-color: turquoise;
+}
+
+.main__header-link{
+  text-decoration: none;
+}
+
+/*MAIN CONTENT PART*/
+
+.form__div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* border: 3px solid green; */
+  margin-top: 4rem;
+}
+
+form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.form__label-username, .form__label-room, .form__label-select{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  align-items: center;
   color: white;
+  font-size: 1.5rem;
+  /* border: 2px solid salmon; */
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.form__label-username-icon{
+  font-size: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form__select{
+  padding: 12px;
+  width: 250px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.form__button{
+  padding: 12px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 0.5rem;
 }
