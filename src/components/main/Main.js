@@ -8,15 +8,15 @@ const Main = () => {
       <form>
         <label htmlFor='username' className='form__label-username'> 
           <FontAwesomeIcon icon={faUser} className='form__label-username-icon' />
-          <br/>KULLANICI ADI:CEM
+          <br/>KULLANICI ADI:
         </label><br/>
         <label htmlFor='room' className='form__label-room'>
           <FontAwesomeIcon icon={faChartBar} className='form__label-username-icon' />
         </label>
         <label htmlFor='select' className='form__label-select'>ODA SEÇ</label>
-          <select name='cars' id='select' className='form__select'>
-            <option value="volvo">ODA1</option>
-            <option value="volvo">ODA2</option>
+          <select name='room' id='select' className='form__select'>
+            <option value="room1">ODA1</option>
+            <option value="room2">ODA2</option>
           </select>
         <button className='form__button'>KATIL</button>
       </form>
