@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const User = ({userId}) => {
   
   const user = useSelector(state => selectUserById(state, userId))
-  console.log(user)
+  
   const navigate = useNavigate()
 
   if(user) {

@@ -11,7 +11,7 @@ export const userApiSLice = apiSlice.injectEndpoints({
             validateStatus: (response, result) => {
                 return response.status === 200 && !result.isError//optional
             },
-            keepUnusedDataFor: 5,//normally default 60seconds,
+            /* keepUnusedDataFor: 5, *///normally default 60seconds,
             transformResponse: responseData => {
                 const loadedUser = responseData.map(user => {
                     user.id = user._id
@@ -43,7 +43,7 @@ export const userApiSLice = apiSlice.injectEndpoints({
         updateUser: builder.mutation({
             query: initialUserData => ({
                 url: '/users',
-                method: 'POST',
+                method: 'PATCH',
                 body: {
                     ...initialUserData,
                 }

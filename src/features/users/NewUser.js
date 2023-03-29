@@ -28,7 +28,7 @@ const NewUser = () => {
     e.preventDefault()
     await addNewUser({username, password})
   }
-  const errMessage = (!isLoading && isError) ? <p>{error?.data?.message}</p> : null
+  const errMessage = (!isLoading || isError) ? <p>{error?.data?.message}</p> : null
   const content = (
     <div className='form__div'>
       <form onSubmit={onSaveUser}>
