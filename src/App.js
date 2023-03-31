@@ -25,6 +25,9 @@ function App() {
                 <Route path='new' element={<NewUser />} />
                 <Route path=':id' element={<EditUser />} />
               </Route>
+              <Route path='messages'>
+                <Route index element={<MessageList />}/>
+              </Route>
             </Route>
           </Route>
         </Route>
