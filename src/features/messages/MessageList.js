@@ -1,6 +1,8 @@
 import React from 'react'
 import { useGetMessagesQuery } from './messageApiSlice'
 import Message from './Message'
+import NewMessage from './NewMessage'
+
 
 const MessageList = () => {
 
@@ -26,7 +28,10 @@ const MessageList = () => {
           </tr>
         </thead>
         <tbody>
+          <div>
           {tableContent}
+          <NewMessage />
+          </div>
         </tbody>
       </table>
     )

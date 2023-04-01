@@ -26,7 +26,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
                         ...result.ids.map(id => ({type: 'Message', id}))
                     ]
                 }else return {type: 'Message', id:'LIST'}
-            }
+            },
         }),
         addNewMessage: builder.mutation({
             query: initialMessageData => ({
