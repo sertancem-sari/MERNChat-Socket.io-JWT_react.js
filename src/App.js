@@ -8,7 +8,9 @@ import UserList from './features/users/UserList';
 import NewUser from './features/users/NewUser';
 import EditUser from './features/users/EditUser';
 import Prefetch from './features/subfetch/Prefetch';
+import MessageList from './features/messages/MessageList';
 import './App.css';
+import NewMessage from './features/messages/NewMessage';
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
               </Route>
               <Route path='messages'>
                 <Route index element={<MessageList />}/>
+                <Route path='new' element={<NewMessage />}/>
               </Route>
             </Route>
           </Route>

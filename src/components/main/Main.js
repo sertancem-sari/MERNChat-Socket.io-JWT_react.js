@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartBar, faUser } from "@fortawesome/free-solid-svg-icons"
+import { Link } from 'react-router-dom'
 
 const Main = () => {
   return (
@@ -18,7 +19,7 @@ const Main = () => {
             <option value="room1">ODA1</option>
             <option value="room2">ODA2</option>
           </select>
-        <button className='form__button'>KATIL</button>
+        <Link to='/main/messages'><button className='form__button'>KATIL</button></Link>
       </form>
       
     </div>
