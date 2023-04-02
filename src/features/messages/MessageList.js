@@ -21,15 +21,18 @@ const MessageList = () => {
             : null
 
     content = (
-      <table>
+      <table className='messages-table'>
         <thead>
           <tr>
-            <th>Messagename</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <div>
-          {tableContent}
+          <div className='messages-main'>
+            <div className='random'>
+
+              {tableContent}
+            </div>
           <NewMessage />
           </div>
         </tbody>

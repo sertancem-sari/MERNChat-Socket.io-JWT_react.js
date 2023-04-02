@@ -85,7 +85,7 @@ header{
   margin-top: 4rem;
 }
 
-form{
+#form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,19 +128,25 @@ form{
 /*MESSAGE PART*/
 
 .message-body {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 80vh;
-  width: 90%;
-  max-width: 1200px;
+  /* min-height: 80vh; */
+  overflow-y: auto;
 }
 
-#message-container {
-  border: 1px solid black;
-  flex-grow: 1;
-  overflow-y: auto;
+.messages-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.messages-main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #message-container div {
@@ -148,6 +154,18 @@ form{
   padding: 5px;
 }
 
+#message-form{
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: black;
+  opacity: 0.8;
+}
+
 .random{
-  color: aqua;
+  color: white;
+  border: 2px solid black;
+  width: 1000px;
+  height: auto;
+  margin-bottom: 35rem;
 }
