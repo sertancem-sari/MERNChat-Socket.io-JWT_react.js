@@ -3,10 +3,10 @@ import { useGetMessagesQuery } from './messageApiSlice'
 import Message from './Message'
 import NewMessage from './NewMessage'
 
-
 const MessageList = () => {
 
   const {data:messages, isLoading, isSuccess, isError, error} = useGetMessagesQuery()
+
 
   let content 
 

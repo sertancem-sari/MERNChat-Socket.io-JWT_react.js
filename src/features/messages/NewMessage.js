@@ -6,7 +6,7 @@ const socket = io('http://localhost:3500')
 
 const NewMessage = () => {
 
-    const [addNewMessage, {isSuccess}] = useAddNewMessageMutation()
+    const [addNewMessage] = useAddNewMessageMutation()
 
     const [message, setMessage] = useState("")
     const [received, setReceived] = useState("")
@@ -17,21 +17,22 @@ const NewMessage = () => {
     useEffect(() => {
         socket.on("receive message", (data) => {
             setReceived(data.message)
+            addNewMessage(data.message)
         })
-    }, [socket])
+    }, [addNewMessage])
 
     const onSaveMessage = async (e) => {
         e.preventDefault()
         await addNewMessage({sentence:message})
     }
-   
+
     const content = (
         <>
             <div className='message-body'>
                 <div id='message-container'></div>
                 <form id='message-form' onSubmit={onSaveMessage}>
                     <label htmlFor='message-input'>Message</label>
-                    <input type='text' id='message-input' onChange={(e) => setMessage(e.target.value)}/>
+                    <input type='text' id='message-input' autoComplete='off' onChange={(e) => setMessage(e.target.value)}/>
                     <button type='submit' id='send-button' onClick={sendMessage}>Send</button>
                     <label htmlFor='room-input'>Room</label>
                     <input type='text' id='room-input'/>
