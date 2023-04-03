@@ -30,12 +30,12 @@ const NewUser = () => {
   }
   const errMessage = (!isLoading || isError) ? <p>{error?.data?.message}</p> : null
   const content = (
-    <div className='form__div'>
-      <form onSubmit={onSaveUser}>
+    <div className='form__new-div'>
+      <form className='form__new' onSubmit={onSaveUser}>
         {errMessage}
         <h1>YENİ KULLANICI</h1>
-        <label htmlFor='username' className='form__label-username'> 
-          <FontAwesomeIcon icon={faUser} className='form__label-username-icon' />
+        <label htmlFor='username' className='form__label-new-username'> 
+          <FontAwesomeIcon icon={faUser} className='form__label-new-username-icon' />
           <br/>KULLANICI ADI:
         </label><br/>
         <input
@@ -45,9 +45,10 @@ const NewUser = () => {
           type='text'
           autoComplete='off'
           onChange={onUsernameChange}
+          className='form__input-new'
         />
         <label htmlFor='username' className='form__label-username'> 
-          <FontAwesomeIcon icon={faKey} className='form__label-username-icon' />
+          <FontAwesomeIcon icon={faKey} className='form__label-new-parola-icon' />
           <br/>PAROLA:
         </label><br/>
         <input
@@ -56,8 +57,9 @@ const NewUser = () => {
           value={password}
           type='password'
           onChange={onPasswordChange}
+          className='form__input-new'
         />
-        <button>KAYDET</button>
+        <button className='form__button-new-save'>KAYDET</button>
       </form>
     </div>
   )

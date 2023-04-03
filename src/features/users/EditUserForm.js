@@ -45,12 +45,12 @@ const EditUserForm = ({user}) => {
   const errDeleteMessage = (!isLoading || isDeleteError) ? <span>{errorDelete?.data?.message}</span> : null
   
   const content = (
-    <div className='form__div'>
-        <form onSubmit={e => e.preventDefault()}>
+    <div className='form__edit-div'>
+        <form className='form__edit' onSubmit={e => e.preventDefault()}>
             <span>{errMessage}</span>
             <span>{errDeleteMessage}</span>
-            <label htmlFor='username' className='form__label-username'> 
-                <FontAwesomeIcon icon={faUser} className='form__label-username-icon' />
+            <label htmlFor='username' className='form__label-edit-username'> 
+                <FontAwesomeIcon icon={faUser} className='form__label-edit-username-icon' />
                 <br/>KULLANICI ADI:
             </label><br/>
             <input
@@ -60,9 +60,10 @@ const EditUserForm = ({user}) => {
                 type='text'
                 autoComplete='off'
                 onChange={onUsernameChange}
+                className='form__input-edit'
             />
             <label htmlFor='username' className='form__label-username'> 
-                <FontAwesomeIcon icon={faKey} className='form__label-username-icon' />
+                <FontAwesomeIcon icon={faKey} className='form__label-edit-username-icon' />
                 <br/>PAROLA:
             </label><br/>
             <input 
@@ -71,17 +72,22 @@ const EditUserForm = ({user}) => {
                 value={password}
                 type='password'
                 onChange={onPasswordChange}
+                className='form__input-edit'
             />
-            <button
-                title='save'
-                onClick={onUserSave}
-            >KAYDET
-            </button>
-            <button
-                title='delete'
-                onClick={onUserDelete}
-            >SİL
-            </button>
+            <div className='form__buttons-edit'>
+              <button
+                  title='save'
+                  onClick={onUserSave}
+                  className='form__button-edit-save'
+              >KAYDET
+              </button>
+              <button
+                  title='delete'
+                  onClick={onUserDelete}
+                  className='form__button-edit-delete'
+              >SİL
+              </button>
+            </div>
         </form>
     </div>
   )

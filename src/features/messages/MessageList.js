@@ -3,6 +3,8 @@ import { useGetMessagesQuery } from './messageApiSlice'
 import Message from './Message'
 import NewMessage from './NewMessage'
 
+
+
 const MessageList = () => {
 
   const {data:messages, isLoading, isSuccess, isError, error} = useGetMessagesQuery()
@@ -29,11 +31,8 @@ const MessageList = () => {
         </thead>
         <tbody>
           <div className='messages-main'>
-            <div className='random'>
-
-              {tableContent}
-            </div>
-          <NewMessage />
+            <div className='messages-content'>{tableContent}</div> 
+            <div className='messages__new'><NewMessage /></div>
           </div>
         </tbody>
       </table>

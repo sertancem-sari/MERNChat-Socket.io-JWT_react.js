@@ -16,21 +16,6 @@ body{
   height: 100vh;
 }
 
-.welcome-comtainer{
-  border: 1rem solid red;
-}
-
-.public{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 800px;
-}
-
-.text{
-  font-size: 5rem;
-}
-
 /* MAIN HEADER PART*/
 
 li{
@@ -82,10 +67,10 @@ header{
   align-items: center;
   min-height: 80vh;
   /* border: 3px solid green; */
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
-#form{
+.form__main{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +88,6 @@ header{
   align-items: center;
   color: white;
   font-size: 1.5rem;
-  /* border: 2px solid salmon; */
   margin-bottom: 2rem;
 }
 
@@ -118,14 +102,146 @@ header{
   margin-bottom: 1rem;
 }
 
-.form__button{
+.form__button-main{
   padding: 12px;
   width: 200px;
   font-size: 20px;
   border-radius: 0.5rem;
 }
 
+
+/*USER PART*/
+
+/*Edit User*/
+
+.form__edit-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.form__edit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 500px;
+  height: 600px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.form__label-edit-username{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form__label-edit-username-icon{
+  font-size: 4rem;
+}
+
+.form__button-edit-save, .form__button-edit-delete{
+  padding: 12px;
+  width: 150px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.form__buttons-edit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input-edit{
+  margin-bottom: 2rem;
+}
+
+/*Edit User end*/
+
+
+/*New User*/
+
+.form__new-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.form__new{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 500px;
+  height: 600px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.form__label-new-username{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form__label-new-username-icon, .form__label-new-parola-icon{
+  font-size: 4rem;
+}
+
+.form__button-new-save{
+  padding: 12px;
+  width: 150px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.form__input-new{
+  margin-bottom: 2rem;
+}
+
+/*New User end*/
+
 /*MESSAGE PART*/
+
+.messages-main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+  width: 80vw;
+  height: 80vh;
+}
+
+.messages-content{
+  width: 100%;
+  margin-bottom: 2rem;
+ /*  overflow-x: hidden;
+	overflow-y: visible auto; */
+  overflow-y: hidden visible;
+  overflow-x: auto;
+
+}
+
+.messages__new{
+  margin-top: auto;
+}
+
 
 .message-body {
   display: flex;
@@ -142,12 +258,6 @@ header{
   align-items: center;
 }
 
-.messages-main{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 
 #message-container div {
   background-color: #CCC;
@@ -160,12 +270,4 @@ header{
   padding: 2rem;
   background-color: black;
   opacity: 0.8;
-}
-
-.random{
-  color: white;
-  border: 2px solid black;
-  width: 1000px;
-  height: auto;
-  margin-bottom: 35rem;
 }

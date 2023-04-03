@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Main = () => {
   return (
     <div className='form__div'>
-      <form>
+      <form className='form__main'>
         <label htmlFor='username' className='form__label-username'> 
           <FontAwesomeIcon icon={faUser} className='form__label-username-icon' />
           <br/>KULLANICI ADI:
@@ -19,7 +19,7 @@ const Main = () => {
             <option value="room1">ODA1</option>
             <option value="room2">ODA2</option>
           </select>
-        <Link to='/main/messages'><button className='form__button'>KATIL</button></Link>
+        <Link to='/main/messages'><button className='form__button-main'>KATIL</button></Link>
       </form>
       
     </div>
