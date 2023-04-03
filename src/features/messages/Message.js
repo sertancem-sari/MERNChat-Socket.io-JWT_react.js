@@ -10,7 +10,7 @@ const Message = ({messageId}) => {
 
     return (
         <tr>
-            <td>{message.sentence}</td>
+            <td className='each-message'>{message.sentence}</td>
         </tr>
     )
 

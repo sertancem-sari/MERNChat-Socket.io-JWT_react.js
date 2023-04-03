@@ -17,6 +17,7 @@ const NewMessage = () => {
         socket.on("receive message", (data) => {
             addNewMessage(data.message)
         })
+        setMessage('')
     }, [addNewMessage])
 
     const onSaveMessage = async (e) => {
@@ -27,13 +28,17 @@ const NewMessage = () => {
     const content = (
         <>
             <div className='message-body'>
-                <form id='message-form' onSubmit={onSaveMessage}>
-                    <label htmlFor='message-input'>Message</label>
-                    <input type='text' id='message-input' autoComplete='off' onChange={(e) => setMessage(e.target.value)}/>
-                    <button type='submit' id='send-button' onClick={sendMessage}>Send</button>
-                    <label htmlFor='room-input'>Room</label>
-                    <input type='text' id='room-input'/>
-                    <button type='button' id='room-button'>Join</button>
+                <form className='message-form' onSubmit={onSaveMessage}>
+                    <div className='dene'>
+                        <label htmlFor='message-input'>Message</label>
+                        <input className='message__new-input' type='text' id='message-input' autoComplete='off' onChange={(e) => setMessage(e.target.value)}/>
+                        <button className='message-buttons' type='submit' id='send-button' onClick={sendMessage}>Gönder</button>
+                    </div>
+                    <div className='dene'>
+                        <label htmlFor='room-input'>Room</label>
+                        <input className='message__new-input' type='text' id='room-input'/>
+                        <button className='message-buttons' type='button' id='room-button'>Katıl</button>
+                    </div>
                 </form>
             </div>
         </>

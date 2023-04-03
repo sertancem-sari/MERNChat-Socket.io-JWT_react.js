@@ -9,6 +9,7 @@ const MainHeader = () => {
           <Link to='/main'><li>ANASAYFA</li></Link>
           <Link to='/main/users'><li>AYARLAR</li></Link>
           <Link to='/'><li>GİRİŞ YAP</li></Link>
+          <Link to='/main/messages'><li>MESAJLAR</li></Link>
         </ul>
       </nav>
       <Link to='/main/users/new' className='main__header-link'><li className='main__header-sign'>KAYIT OL</li></Link>

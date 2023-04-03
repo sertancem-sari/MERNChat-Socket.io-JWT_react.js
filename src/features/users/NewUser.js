@@ -33,7 +33,7 @@ const NewUser = () => {
     <div className='form__new-div'>
       <form className='form__new' onSubmit={onSaveUser}>
         {errMessage}
-        <h1>YENİ KULLANICI</h1>
+        <h1 className='form__new-header'>YENİ KULLANICI</h1>
         <label htmlFor='username' className='form__label-new-username'> 
           <FontAwesomeIcon icon={faUser} className='form__label-new-username-icon' />
           <br/>KULLANICI ADI:
