@@ -11,6 +11,7 @@ import Prefetch from './features/subfetch/Prefetch';
 import MessageList from './features/messages/MessageList';
 import './App.css';
 import NewMessage from './features/messages/NewMessage';
+import PersistLogin from './features/auth/PersistLogin';
 
 function App() {
   return (
@@ -18,18 +19,19 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Welcome />} />
-          <Route path='login' element={<Login />} />
-          <Route element={<Prefetch />}>
-            <Route path='main' element={<MainLayout />}>
-              <Route index element={<Main />}/>
-              <Route path='users'>
-                <Route index element={<UserList />}/>
-                <Route path='new' element={<NewUser />} />
-                <Route path=':id' element={<EditUser />} />
-              </Route>
-              <Route path='messages'>
-                <Route index element={<MessageList />}/>
-                <Route path='new' element={<NewMessage />}/>
+          <Route element={<PersistLogin />}>
+            <Route element={<Prefetch />}>
+              <Route path='main' element={<MainLayout />}>
+                <Route index element={<Main />}/>
+                <Route path='users'>
+                  <Route index element={<UserList />}/>
+                  <Route path='new' element={<NewUser />} />
+                  <Route path=':id' element={<EditUser />} />
+                </Route>
+                <Route path='messages'>
+                  <Route index element={<MessageList />}/>
+                  <Route path='new' element={<NewMessage />}/>
+                </Route>
               </Route>
             </Route>
           </Route>

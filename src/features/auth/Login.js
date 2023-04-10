@@ -3,6 +3,9 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
+import usePersist from '../../hook/usePersist'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faKey, faUser } from "@fortawesome/free-solid-svg-icons"
 
 const Login = () => {
     const userRef = useRef()
@@ -10,6 +13,7 @@ const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [errMsg, setErrMsg] = useState('')
+    const [persist, setPersist] = usePersist()
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -49,23 +53,25 @@ const Login = () => {
 
     const handleUserInput = (e) => setUsername(e.target.value)
     const handlePwdInput = (e) => setPassword(e.target.value)
+    const handleToggle = () => setPersist(prev => !prev)
 
     const errClass = errMsg ? "errmsg" : "offscreen"
 
     if (isLoading) return <p>Loading...</p>
 
     const content = (
-        <section className="public">
-            <header>
-                <h1>Employee Login</h1>
+        <section className="section__login">
+            <header className='header__login'>
+                <h1 className='header__login-text'>KULLANICI GİRİŞİ</h1>
             </header>
-            <main className="login">
+            <FontAwesomeIcon icon={faUser} className='' />
+            <main className="main__login">
                 <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
 
-                <form className="form" onSubmit={handleSubmit}>
-                    <label htmlFor="username">Username:</label>
+                <form className="form__login" onSubmit={handleSubmit}>
+                    <label className='header__login-label' htmlFor="username">Kullanıcı Adı</label>
                     <input
-                        className="form__input"
+                        className="form__login-input"
                         type="text"
                         id="username"
                         ref={userRef}
@@ -75,21 +81,28 @@ const Login = () => {
                         required
                     />
 
-                    <label htmlFor="password">Password:</label>
+                    <label className='header__login-label' htmlFor="password">Parola</label>
                     <input
-                        className="form__input"
+                        className="form__login-input"
                         type="password"
                         id="password"
                         onChange={handlePwdInput}
                         value={password}
                         required
                     />
-                    <button className="form__submit-button">Sign In</button>
+                    <button className="form__submit-button">Giriş</button>
+                    <label htmlFor="persist" className="form__login-persist">
+                        <input
+                            type="checkbox"
+                            className="form__login-checkbox"
+                            id="persist"
+                            onChange={handleToggle}
+                            checked={persist}
+                        />
+                        Trust This Device
+                    </label>
                 </form>
             </main>
-            <footer>
-                <Link to="/">Back to Home</Link>
-            </footer>
         </section>
     )
 
