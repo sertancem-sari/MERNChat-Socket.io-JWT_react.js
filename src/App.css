@@ -281,7 +281,7 @@ header{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: black;
   opacity: 0.8;
   width: 80vw;
   height: 80vh;
@@ -314,13 +314,24 @@ header{
   overflow-y: auto;
 }
 
-.each-message{
-  display: inline-block;
+.each-message-sentence{
+  display: flexbox;
   background-color: turquoise;
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  /* margin-top: 1rem; */
+  margin-left: 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.each-message-user{
+  display: flexbox;
+  background-color: rgb(28, 115, 214);
   color: white;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin-left: 1rem;
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -361,5 +372,19 @@ header{
   display: flex;
   justify-content: center;
   
+}
+
+.message__screen{
+  display:flex;
+  width: auto;
+  background-color: black;
+}
+
+.message__screen-right{
+  display:flex;
+  width: auto;
+  background-color: violet;
+  justify-content: flex-end;
+  background-color: black;
 }
 

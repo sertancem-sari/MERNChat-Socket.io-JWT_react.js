@@ -60,7 +60,7 @@ const PersistLogin = () => {
         content = (
             <p className='errmsg'>
                 {error.data?.message}
-                <Link to="/">Please login again</Link>.
+                <Link to="/">Tekrar giriş yapın</Link>.
             </p>
         )
     } else if (isSuccess && trueSuccess) { //persist: yes, token: yes

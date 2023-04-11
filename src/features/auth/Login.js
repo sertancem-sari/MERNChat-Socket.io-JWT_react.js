@@ -1,11 +1,11 @@
 import { useRef, useState, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 import usePersist from '../../hook/usePersist'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKey, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
 
 const Login = () => {
     const userRef = useRef()
@@ -99,7 +99,7 @@ const Login = () => {
                             onChange={handleToggle}
                             checked={persist}
                         />
-                        Trust This Device
+                        Güvenli Cihaz
                     </label>
                 </form>
             </main>

@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useAddNewMessageMutation } from './messageApiSlice'
 import { io } from "socket.io-client"
+import useAuth from '../../hook/useAuth'
 
 const socket = io('http://localhost:3500')
 
 const NewMessage = () => {
-
+    const { username } = useAuth()
     const [addNewMessage] = useAddNewMessageMutation()
 
     const [message, setMessage] = useState("")
     const sendMessage= () => {
-        socket.emit("send message", {message})
+        socket.emit("send message", {message, username})
     }
 
     useEffect(() => {
@@ -22,7 +23,7 @@ const NewMessage = () => {
 
     const onSaveMessage = async (e) => {
         e.preventDefault()
-        await addNewMessage({sentence:message})
+        await addNewMessage({sentence:message, username})
     }
 
     const content = (

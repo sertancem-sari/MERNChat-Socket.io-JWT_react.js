@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Welcome from './components/Welcome';
-import Login from './features/auth/Login';
 import MainLayout from './components/main/MainLayout';
 import Main from './components/main/Main';
 import UserList from './features/users/UserList';
