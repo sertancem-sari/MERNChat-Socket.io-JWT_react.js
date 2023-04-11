@@ -9,10 +9,12 @@ const Message = ({messageId}) => {
   console.log( message.username === username)
   if(message) {
     const right = message.username === username ? "message__screen" : "message__screen-right"
+    const rightEach = message.username === username ? "each-message-sentence" : "each-message-sentence-right"
+    
     return (
         <tr className={right}>
           <div className='message__container'>
-            <td className='each-message-sentence'>
+            <td className={rightEach}>
               {message.username}:{message.sentence}
             </td>
           </div>

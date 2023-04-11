@@ -324,11 +324,11 @@ header{
   margin-left: 1rem;
   font-family: 'Noto Sans TC', sans-serif;
 }
-.each-message-user{
+.each-message-sentence-right{
   display: flexbox;
-  background-color: rgb(28, 115, 214);
+  background-color: violet;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   border-radius: 0.5rem;
   /* margin-top: 1rem; */
   margin-left: 1rem;
