@@ -16,7 +16,7 @@ const User = ({userId}) => {
         <tr>
             <td>{user.username}</td>
             <td>
-                <button onClick={handleEdit}>Edit Button</button>
+                <button onClick={handleEdit}>Düzenle</button>
             </td>
         </tr>
     )

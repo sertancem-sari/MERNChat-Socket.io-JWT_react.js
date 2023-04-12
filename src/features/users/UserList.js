@@ -26,8 +26,8 @@ const UserList = () => {
       <table>
         <thead>
           <tr>
-            <th>Username</th>
-            <th>EDIT</th>
+            <th>Kullanıcı Adı</th>
+            <th>Düzenle</th>
           </tr>
         </thead>
         <tbody>
